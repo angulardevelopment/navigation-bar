@@ -1,3 +1,10 @@
+# About
+
+Basic navigation bar
+
+To check paramMap usage
+http://localhost:4200/#/advance/3232
+
 # NavBar
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.3.

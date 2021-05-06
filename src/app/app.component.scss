@@ -1,0 +1,37 @@
+.parent-menu ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+.example-viewport {
+  height: 200px;
+  width: 200px;
+  border: 1px solid black;
+}
+
+.example-item {
+  height: 50px;
+}
+
+.parent-menu li {
+  float: left;
+}
+.parent-menu li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 15px 15px;
+  text-decoration: none;
+}
+
+.parent-menu li a:hover:not(.active) {
+  background-color: #111;
+}
+.parent-menu .active{
+  background-color: #4CAF50;
+}
+.parent-container {
+  padding-left: 10px;
+}
