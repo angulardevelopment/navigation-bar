@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { BasicComponent } from './basic/basic.component';
 import { AdvanceComponent } from './advance/advance.component';
 import { ChildComponent } from './child/child.component';
+import { StickyComponent } from './sticky/sticky.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     BasicComponent,
     AdvanceComponent,
-    ChildComponent
+    ChildComponent,
+    StickyComponent
   ],
   imports: [
     BrowserModule,

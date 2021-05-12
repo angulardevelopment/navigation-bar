@@ -1,1 +1,26 @@
 /* You can add global styles to this file, and also import other style files */
+
+// sticky component css added
+html {
+  box-sizing: border-box;
+  background: #eeeeee;
+  font-family: 'helvetica neue';
+  font-size: 20px;
+  font-weight: 200;
+}
+
+body {
+  margin: 0;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body.fixed-nav nav {
+  position: fixed;
+  box-shadow: 0 5px 0 rgba(0,0,0,0.1);
+}
+body.fixed-nav .site-wrap {
+  transform: scale(1);
+}

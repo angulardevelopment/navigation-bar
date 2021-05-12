@@ -1,9 +1,11 @@
 # About
 
 Basic navigation bar
-
+routerLink used
 To check paramMap usage
 http://localhost:4200/#/advance/3232
+
+sticky navigation bar added
 
 # NavBar
 
