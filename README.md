@@ -5,7 +5,7 @@ routerLink used
 To check paramMap usage
 http://localhost:4200/#/advance/3232
 
-sticky navigation bar added
+sticky navigation bar added -In this navigation will stick to top when we scroll the page.
 
 # NavBar
 
