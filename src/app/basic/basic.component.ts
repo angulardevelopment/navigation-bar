@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-
+import { Component, Input, OnInit } from '@angular/core';
+import { Location } from '@angular/common';
 @Component({
   selector: 'app-basic',
   templateUrl: './basic.component.html',
@@ -7,9 +7,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BasicComponent implements OnInit {
 
-  constructor() { }
+  @Input()
+  name: Node;
 
   ngOnInit(): void {
+      console.log(this.name);
   }
 
+  constructor(private _location: Location) {
+  }
+  goBack() {
+  this._location.back();
+  console.log(this._location.path())
+  }
 }

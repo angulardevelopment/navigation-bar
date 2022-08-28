@@ -3,10 +3,10 @@ import { BasicComponent } from './basic/basic.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { childRoutes } from './advance-child.routes';
-const routes: Routes = [
+const APP_ROUTES: Routes = [
   {
 		path: 'basic',
-		component: BasicComponent
+		component: BasicComponent,
 	},
   {
 		path: 'advance/:username',
@@ -16,7 +16,7 @@ const routes: Routes = [
 	{
 		path: '',
 		redirectTo: '/basic',
-		pathMatch: 'full'    //we can also use prefix, full here
+		pathMatch: 'full'   
 	},
 	{
 		path: '**',
@@ -25,7 +25,7 @@ const routes: Routes = [
 ]
 
 @NgModule({
-  imports: [	RouterModule.forRoot(routes, { useHash: true })],  //optional usehash],
+  imports: [RouterModule.forRoot(APP_ROUTES, { useHash: true, enableTracing: false })],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
