@@ -27,6 +27,23 @@ export class StripeComponent implements OnInit {
 
   });
 
+
+  // this.router.events
+  // .filter(event => event instanceof NavigationEnd)
+  // .map(() => this.activatedRoute)
+  // .map(route => {
+  //   while (route.firstChild) {
+  //     route = route.firstChild;
+  //   }
+
+  //   return route;
+  // })
+  // .filter(route => route.outlet === 'primary')
+  // .mergeMap(route => route.data)
+  // .subscribe(event => {
+  //   this.titleService.setTitle(event['title'] + config.suffixTitle);
+  // });
+
   }
   ngOnInit() {
     const triggers = Array.from(document.querySelectorAll('.cool > li'));
@@ -75,6 +92,8 @@ export class StripeComponent implements OnInit {
 // console.log("Navigation has failed!");
 // }
 // });
+
+
 
   }
 
