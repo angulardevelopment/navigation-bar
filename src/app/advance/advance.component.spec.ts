@@ -1,4 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { RouterTestingModule } from '@angular/router/testing';
 
 import { AdvanceComponent } from './advance.component';
 
@@ -8,6 +9,8 @@ describe('AdvanceComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
+      imports: [RouterTestingModule],
+      
       declarations: [ AdvanceComponent ]
     })
     .compileComponents();
@@ -22,4 +25,10 @@ describe('AdvanceComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should create', () => {
+    component.test();
+    expect(component).toBeTruthy();
+  });
 });
+

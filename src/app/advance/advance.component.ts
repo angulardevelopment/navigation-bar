@@ -23,9 +23,7 @@ export class AdvanceComponent implements OnInit {
       this.username = params.get('username');
     });
 
-    this.route.queryParams.subscribe(queryParams => {
-
-})
+   
 
 this.route.snapshot.queryParamMap.get('id');
 
@@ -36,6 +34,13 @@ this.route.snapshot.queryParamMap.get('id');
 //   })
 const heroId = this.route.snapshot.paramMap.get('id');
 
+  }
+
+  test(){
+    this.route.queryParams.subscribe(queryParams => {
+console.log(queryParams);
+
+    })
   }
 
 }
