@@ -13,7 +13,7 @@ export class StripeComponent implements OnInit {
       console.log(events);
  
         if (events instanceof NavigationEnd) {
-        console.log('triggered event when navigation ends successfully', events);
+        console.log('triggered event when navigation ends successfully', events.url);
         }
         if (events instanceof NavigationStart) {
         console.log(events);
