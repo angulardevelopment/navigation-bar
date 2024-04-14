@@ -1,12 +1,12 @@
 import { AdvanceComponent } from './advance/advance.component';
-import { BasicComponent } from './basic/basic.component';
+import { NavFeatComponent } from './nav-feat/nav-feat.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { childRoutes } from './advance-child.routes';
 const APP_ROUTES: Routes = [
   {
 		path: 'basic',
-		component: BasicComponent,
+		component: NavFeatComponent,
 	},
   {
 		path: 'advance/:username',
@@ -20,7 +20,7 @@ const APP_ROUTES: Routes = [
 	},
 	{
 		path: '**',
-		component: BasicComponent
+		component: NavFeatComponent
 	}
 ]
 

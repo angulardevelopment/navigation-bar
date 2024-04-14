@@ -2,11 +2,11 @@ import { Component, Input, OnInit } from '@angular/core';
 import { Location } from '@angular/common';
 import { ActivatedRoute, Router } from '@angular/router';
 @Component({
-  selector: 'app-basic',
-  templateUrl: './basic.component.html',
-  styleUrls: ['./basic.component.scss']
+  selector: 'app-nav-feat',
+  templateUrl: './nav-feat.component.html',
+  styleUrls: ['./nav-feat.component.scss']
 })
-export class BasicComponent implements OnInit {
+export class NavFeatComponent implements OnInit {
 
   @Input()
   name: Node;

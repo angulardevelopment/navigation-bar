@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { BasicComponent } from './basic/basic.component';
+import { NavFeatComponent } from './nav-feat/nav-feat.component';
 import { AdvanceComponent } from './advance/advance.component';
 import { ChildComponent } from './child/child.component';
 import { StickyComponent } from './sticky/sticky.component';
@@ -12,7 +12,7 @@ import { StripeComponent } from './stripe/stripe.component';
 @NgModule({
   declarations: [
     AppComponent,
-    BasicComponent,
+    NavFeatComponent,
     AdvanceComponent,
     ChildComponent,
     StickyComponent,
