@@ -8,6 +8,7 @@ import { AdvanceComponent } from './advance/advance.component';
 import { ChildComponent } from './child/child.component';
 import { StickyComponent } from './sticky/sticky.component';
 import { StripeComponent } from './stripe/stripe.component';
+import { BookComponent } from './book/book.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { StripeComponent } from './stripe/stripe.component';
     AdvanceComponent,
     ChildComponent,
     StickyComponent,
-    StripeComponent
+    StripeComponent,
+    BookComponent
   ],
   imports: [
     BrowserModule,
