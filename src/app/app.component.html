@@ -3,9 +3,19 @@
     <li><a routerLink="/basic" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Basic</a></li>
      <li><a routerLink="/advance" routerLinkActive="active">Advance</a></li>
      <li><a routerLink="/">Go To Home</a></li>
-     <a [routerLink]="['/advance/','product']">advance</a> 
+     <a [routerLink]="['/advance/','product']">advance</a>
   </ul>
 </nav>
+
+<b>RouteReuseStrategy in Angular </b> <br /><br />
+
+<button routerLink="">Home</button>
+<br /><br />
+
+<button routerLink="compA">Component A</button>
+<button routerLink="compB">Component B</button>
+<hr />
+
 <div [ngClass]="'parent-container'">
   <router-outlet></router-outlet>
 </div>

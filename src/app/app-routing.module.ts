@@ -5,6 +5,8 @@ import { Routes, RouterModule } from '@angular/router';
 import { childRoutes } from './advance-child.routes';
 import { BookComponent } from './book/book.component';
 import { APIResolver } from './APIResolver';
+import { ComponentA } from './componentA/componentA.component';
+import { ComponentB } from './componentB/componentB.component';
 const APP_ROUTES: Routes = [
   {
 		path: 'basic',
@@ -22,6 +24,14 @@ const APP_ROUTES: Routes = [
 	},
   { path: 'book', component: BookComponent,
   resolve: { pageData: APIResolver } },
+  {
+    path: 'compA',
+    component: ComponentA,
+  },
+  {
+    path: 'compB',
+    component: ComponentB,
+  },
 	{
 		path: '**',
 		component: NavFeatComponent

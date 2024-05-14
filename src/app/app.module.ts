@@ -9,6 +9,10 @@ import { ChildComponent } from './child/child.component';
 import { StickyComponent } from './sticky/sticky.component';
 import { StripeComponent } from './stripe/stripe.component';
 import { BookComponent } from './book/book.component';
+import { ComponentA } from './componentA/componentA.component';
+import { ComponentB } from './componentB/componentB.component';
+import { RouteReuseStrategy } from '@angular/router';
+import { CustomRouteReuseStrategy } from './custom-route-reuse-strategy';
 
 @NgModule({
   declarations: [
@@ -18,13 +22,19 @@ import { BookComponent } from './book/book.component';
     ChildComponent,
     StickyComponent,
     StripeComponent,
-    BookComponent
+    BookComponent,
+    ComponentA, ComponentB
   ],
   imports: [
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [
+    // {
+    //   provide: RouteReuseStrategy,
+    //   useClass: CustomRouteReuseStrategy,
+    // },
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
