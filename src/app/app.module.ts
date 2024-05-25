@@ -13,6 +13,8 @@ import { ComponentA } from './componentA/componentA.component';
 import { ComponentB } from './componentB/componentB.component';
 import { RouteReuseStrategy } from '@angular/router';
 import { CustomRouteReuseStrategy } from './custom-route-reuse-strategy';
+import { FirstComponent } from './first/first.component';
+import { SecondComponent } from './second/second.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,9 @@ import { CustomRouteReuseStrategy } from './custom-route-reuse-strategy';
     StickyComponent,
     StripeComponent,
     BookComponent,
-    ComponentA, ComponentB
+    ComponentA, ComponentB,
+    FirstComponent,
+    SecondComponent
   ],
   imports: [
     BrowserModule,

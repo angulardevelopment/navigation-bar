@@ -7,6 +7,8 @@ import { BookComponent } from './book/book.component';
 import { APIResolver } from './APIResolver';
 import { ComponentA } from './componentA/componentA.component';
 import { ComponentB } from './componentB/componentB.component';
+import { FirstComponent } from './first/first.component';
+import { SecondComponent } from './second/second.component';
 const APP_ROUTES: Routes = [
   {
 		path: 'basic',
@@ -16,11 +18,6 @@ const APP_ROUTES: Routes = [
 		path: 'advance/:username',
 		component: AdvanceComponent,
 		children: childRoutes
-	},
-	{
-		path: '',
-		redirectTo: '/basic',
-		pathMatch: 'full'
 	},
   { path: 'book', component: BookComponent,
   resolve: { pageData: APIResolver } },
@@ -32,6 +29,9 @@ const APP_ROUTES: Routes = [
     path: 'compB',
     component: ComponentB,
   },
+  { path: 'first', component: FirstComponent },
+  { path: 'second', component: SecondComponent },
+  { path: '**', redirectTo: '/basic', pathMatch: 'full' },
 	{
 		path: '**',
 		component: NavFeatComponent
@@ -39,7 +39,9 @@ const APP_ROUTES: Routes = [
 ]
 
 @NgModule({
-  imports: [RouterModule.forRoot(APP_ROUTES, { useHash: true, enableTracing: false })],
+  imports: [RouterModule.forRoot(APP_ROUTES, { useHash: true, enableTracing: false,
+    scrollPositionRestoration: 'enabled'
+   })],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
