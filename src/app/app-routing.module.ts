@@ -11,16 +11,19 @@ import { FirstComponent } from './first/first.component';
 import { SecondComponent } from './second/second.component';
 const APP_ROUTES: Routes = [
   {
-		path: 'basic',
-		component: NavFeatComponent,
-	},
+    path: 'basic',
+    component: NavFeatComponent,
+  },
   {
-		path: 'advance/:username',
-		component: AdvanceComponent,
-		children: childRoutes
-	},
-  { path: 'book', component: BookComponent,
-  resolve: { pageData: APIResolver } },
+    path: 'advance/:username',
+    component: AdvanceComponent,
+    children: childRoutes,
+  },
+  {
+    path: 'book',
+    component: BookComponent,
+    resolve: { pageData: APIResolver },
+  },
   {
     path: 'compA',
     component: ComponentA,
@@ -32,16 +35,20 @@ const APP_ROUTES: Routes = [
   { path: 'first', component: FirstComponent },
   { path: 'second', component: SecondComponent },
   { path: '**', redirectTo: '/basic', pathMatch: 'full' },
-	{
-		path: '**',
-		component: NavFeatComponent
-	}
-]
+  {
+    path: '**',
+    component: NavFeatComponent,
+  },
+];
 
 @NgModule({
-  imports: [RouterModule.forRoot(APP_ROUTES, { useHash: true, enableTracing: false,
-    scrollPositionRestoration: 'enabled'
-   })],
-  exports: [RouterModule]
+  imports: [
+    RouterModule.forRoot(APP_ROUTES, {
+      useHash: true,
+      enableTracing: false,
+      scrollPositionRestoration: 'enabled',
+    }),
+  ],
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}
