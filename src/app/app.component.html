@@ -1,31 +1,34 @@
 <nav [ngClass]="'parent-menu'">
   <ul>
-    <li><a routerLink="/basic" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Basic</a></li>
-     <li><a routerLink="/advance" routerLinkActive="active">Advance</a></li>
-     <li><a routerLink="/">Go To Home</a></li>
-     <a [routerLink]="['/advance/','product']">advance</a>
+    <li>
+      <a
+        routerLink="/basic"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: true }"
+        >Basic</a
+      >
+    </li>
+    <li><a routerLink="/advance" routerLinkActive="active">Advance</a></li>
+    <li><a routerLink="/">Go To Home</a></li>
+    <a [routerLink]="['/advance/', 'product']">advance</a>
+    <button routerLink="">Home</button>
+    <button routerLink="compA">Component A</button>
+    <button routerLink="compB">Component B</button>
+    <a routerLink="/first" style="margin: 50px">first</a>
+    <a routerLink="/second">second</a>
+
+    <li>
+      <a [routerLink]="[{ outlets: { outlet1: 'StripeComponent' } }]">
+        <p>StripeComponent</p>
+      </a>
+    </li>
   </ul>
 </nav>
-
-<b>RouteReuseStrategy in Angular </b> <br /><br />
-
-<button routerLink="">Home</button>
-<br /><br />
-
-<button routerLink="compA">Component A</button>
-<button routerLink="compB">Component B</button>
-<hr />
-<a routerLink="/first" style="margin: 50px">first</a> 
-<a routerLink="/second">second</a> 
-
 
 <div [ngClass]="'parent-container'">
   <router-outlet></router-outlet>
 </div>
 
+<router-outlet name="outlet1"></router-outlet>
 
-
- <!-- <app-sticky></app-sticky> -->
-
- <!-- <app-stripe></app-stripe> -->
-
+<!-- <app-sticky></app-sticky> -->

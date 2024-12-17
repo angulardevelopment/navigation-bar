@@ -4,18 +4,19 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { childRoutes } from './advance-child.routes';
 import { BookComponent } from './book/book.component';
-import { APIResolver } from './APIResolver';
+import { APIResolver } from './services/APIResolver';
 import { ComponentA } from './componentA/componentA.component';
 import { ComponentB } from './componentB/componentB.component';
 import { FirstComponent } from './first/first.component';
 import { SecondComponent } from './second/second.component';
+import { StripeComponent } from './stripe/stripe.component';
 const APP_ROUTES: Routes = [
   {
     path: 'basic',
     component: NavFeatComponent,
   },
   {
-    path: 'advance/:username',
+    path: 'advance/:username',  // advance/1 or advance/txt
     component: AdvanceComponent,
     children: childRoutes,
   },
@@ -34,7 +35,8 @@ const APP_ROUTES: Routes = [
   },
   { path: 'first', component: FirstComponent },
   { path: 'second', component: SecondComponent },
-  { path: '**', redirectTo: '/basic', pathMatch: 'full' },
+  { path: "StripeComponent", component: StripeComponent, outlet: "outlet1" },
+  // { path: '**', redirectTo: '/basic', pathMatch: 'full' },
   {
     path: '**',
     component: NavFeatComponent,
@@ -44,7 +46,7 @@ const APP_ROUTES: Routes = [
 @NgModule({
   imports: [
     RouterModule.forRoot(APP_ROUTES, {
-      useHash: true,
+      useHash: false,
       enableTracing: false,
       scrollPositionRestoration: 'enabled',
     }),
