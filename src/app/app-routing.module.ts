@@ -48,6 +48,7 @@ const APP_ROUTES: Routes = [
     RouterModule.forRoot(APP_ROUTES, {
       useHash: false,
       enableTracing: false,
+      // handle scrolling upon Angular route transitions. it always scroll to top on navigation change
       scrollPositionRestoration: 'enabled',
     }),
   ],
