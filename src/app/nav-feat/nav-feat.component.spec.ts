@@ -8,8 +8,8 @@ describe('NavFeatComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ NavFeatComponent ]
-    })
+    imports: [NavFeatComponent]
+})
     .compileComponents();
   });
 

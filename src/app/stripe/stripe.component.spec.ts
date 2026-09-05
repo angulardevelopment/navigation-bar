@@ -24,12 +24,11 @@ fdescribe('StripeComponent', () => {
   };
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [RouterTestingModule],
-      declarations: [ StripeComponent ],
-      providers: [
+    imports: [RouterTestingModule, StripeComponent],
+    providers: [
         { provide: Router, useClass: MockRouter },
-      ]
-    })
+    ]
+})
     .compileComponents();
   }));
 

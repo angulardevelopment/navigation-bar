@@ -9,10 +9,8 @@ describe('AdvanceComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [RouterTestingModule],
-      
-      declarations: [ AdvanceComponent ]
-    })
+    imports: [RouterTestingModule, AdvanceComponent]
+})
     .compileComponents();
   });
 

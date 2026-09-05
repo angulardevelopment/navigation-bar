@@ -23,7 +23,6 @@
             "outputPath": "dist/nav-bar",
             "index": "src/index.html",
             "main": "src/main.ts",
-            "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
             "aot": true,
             "assets": [
@@ -68,25 +67,24 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "nav-bar:build"
+            "buildTarget": "nav-bar:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "nav-bar:build:production"
+              "buildTarget": "nav-bar:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "nav-bar:build"
+            "buildTarget": "nav-bar:build"
           }
         },
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
             "main": "src/test.ts",
-            "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.spec.json",
             "karmaConfig": "karma.conf.js",
             "assets": [
@@ -127,7 +125,6 @@
       }
     }
   },
-  "defaultProject": "nav-bar",
   "cli": {
     "analytics": "dcd98020-6137-4a59-adbc-03cea78a6c34"
   }

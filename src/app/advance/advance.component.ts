@@ -1,10 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-advance',
   templateUrl: './advance.component.html',
   styleUrls: ['./advance.component.scss'],
+  imports: [RouterOutlet]
 })
 export class AdvanceComponent implements OnInit {
   username: string;
